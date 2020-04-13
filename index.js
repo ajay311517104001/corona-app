@@ -16,12 +16,7 @@ app.set('view engine','hbs')
 app.get('/',router)
 app.get('/india',router)
 app.get('/district',router)
-app.get('/drop',function(err,response){
-    if(err) console.log(err)
-    else {
-      
-    }
-    })
+app.get('/graph',router)
 
 const port=process.env.PORT ||3000;
 app.listen(port,()=>{
