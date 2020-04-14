@@ -38,11 +38,15 @@ if(Object.keys(req.query).length!=0){
             console.log(err)
         }else{
             var data=JSON.parse(body.body)
+         var gval=  data.confirmed.value
+         var grec=data.recovered.value
+         var gdet=data.deaths.value
+         console.log(gval)
         scontval=fun(data.confirmed.value);
         snewrec=fun(data.recovered.value);   
         snewdet=fun(data.deaths.value);
         var arr =data.lastUpdate.split('T')
-        res.render('index',{newcon:newcon,newrec:newrec,newdet:newdet,array:arr[0],array1:arr[1],scontval:scontval,snewrec:snewdet,snewdet:snewrec,couname:spotted})       
+        res.render('index',{newcon:newcon,newrec:newrec,newdet:newdet,array:arr[0],array1:arr[1],scontval:scontval,snewrec:snewdet,snewdet:snewrec,couname:spotted,gval:gval,grec:grec,gdet:gdet})       
     }})
 }
     }
