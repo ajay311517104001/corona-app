@@ -93,6 +93,9 @@ router.get('/district',function(req,res){
 router.get('/graph',function(req,res){
     res.render('char')
 })
+router.get('/map',function(req,res){
+    res.render('map')
+})
 
 
 module.exports=router

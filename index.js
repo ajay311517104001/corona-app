@@ -17,6 +17,7 @@ app.get('/',router)
 app.get('/india',router)
 app.get('/district',router)
 app.get('/graph',router)
+app.get('/map',router)
 
 const port=process.env.PORT ||3000;
 app.listen(port,()=>{
